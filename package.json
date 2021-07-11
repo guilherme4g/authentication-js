@@ -5,8 +5,8 @@
   "author": "jose guilherme <jgnvs6@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node index.js",
-    "typeorm": "typeorm"
+    "start": "tsnd index.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
   "dependencies": {
     "pg": "^8.6.0",
@@ -14,9 +14,7 @@
     "typeorm": "^0.2.34"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/node": "^7.14.7",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/preset-env": "^7.14.7"
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
   }
 }
