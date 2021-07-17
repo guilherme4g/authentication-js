@@ -1,9 +1,8 @@
-import { getRepository, Repository } from "typeorm";
-import { TypeUser } from "../../entities/typeUsers";
-import { ITypeUsersRepository } from "../ITypeUsersRepository";
+import { getRepository, Repository } from 'typeorm';
+import { TypeUser } from '../../entities/typeUsers';
+import { ITypeUsersRepository } from '../ITypeUsersRepository';
 
 export class TypeUserRepository implements ITypeUsersRepository {
-
   private repository: Repository<TypeUser>;
 
   constructor() {
@@ -11,13 +10,18 @@ export class TypeUserRepository implements ITypeUsersRepository {
   }
 
   list(): Promise<TypeUser[]> {
-    throw new Error("Method not implemented.");
-  }
-  create(typesUser: TypeUser): Promise<TypeUser> {
-    throw new Error("Method not implemented.");
-  }
-  remove(id: number): Promise<void> {
-    throw new Error("Method not implemented.");
+    throw new Error('Method not implemented.');
   }
 
+  // TODO implements method
+  // eslint-disable-next-line no-unused-vars
+  create(typesUser: TypeUser): Promise<TypeUser> {
+    throw new Error('Method not implemented.');
+  }
+
+  // TODO implements method
+  // eslint-disable-next-line no-unused-vars
+  remove(id: number): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
 }

@@ -1,1 +1,1 @@
-import './src/database'
+import './src/database';
