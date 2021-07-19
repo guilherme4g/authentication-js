@@ -7,5 +7,5 @@ export interface ICreateUserTypeDTO {
 export interface IUserTypeRepository {
   list(): Promise<UserType[]>,
   create(data: ICreateUserTypeDTO): Promise<UserType>,
-  remove(id: number): Promise<void>,
+  remove(id: string): Promise<void>,
 }
