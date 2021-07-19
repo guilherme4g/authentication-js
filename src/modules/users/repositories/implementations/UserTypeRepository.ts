@@ -9,16 +9,17 @@ export class UserTypeRepository implements IUserTypeRepository {
     this.repository = getRepository(UserType);
   }
 
-  list(): Promise<UserType[]> {
-    throw new Error('Method not implemented.');
+  async list(): Promise<UserType[]> {
+    const userTypes = await this.repository.find({ });
+    return userTypes;
   }
 
   // TODO implements method
   // eslint-disable-next-line no-unused-vars
   async create({ name }: ICreateUserTypeDTO): Promise<UserType> {
-    const typeUser = this.repository.create({ name });
-    await this.repository.save(typeUser);
-    return typeUser;
+    const userType = this.repository.create({ name });
+    await this.repository.save(userType);
+    return userType;
   }
 
   // TODO implements method
