@@ -1,4 +1,4 @@
-import { TypeUser } from "../entities/typeUsers";
+import { TypeUser } from '../entities/typeUsers';
 
 export interface ICreateTypeUserDTO {
   name: string

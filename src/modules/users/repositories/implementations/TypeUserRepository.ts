@@ -1,6 +1,6 @@
 import { getRepository, Repository } from 'typeorm';
 import { TypeUser } from '../../entities/typeUsers';
-import { ITypeUsersRepository } from '../ITypeUsersRepository';
+import { ICreateTypeUserDTO, ITypeUsersRepository } from '../ITypeUsersRepository';
 
 export class TypeUserRepository implements ITypeUsersRepository {
   private repository: Repository<TypeUser>;
@@ -15,8 +15,10 @@ export class TypeUserRepository implements ITypeUsersRepository {
 
   // TODO implements method
   // eslint-disable-next-line no-unused-vars
-  create(typesUser: TypeUser): Promise<TypeUser> {
-    throw new Error('Method not implemented.');
+  async create({ name }: ICreateTypeUserDTO): Promise<TypeUser> {
+    const typeUser = this.repository.create({ name });
+    await this.repository.save(typeUser);
+    return typeUser;
   }
 
   // TODO implements method
