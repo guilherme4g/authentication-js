@@ -3,7 +3,7 @@ import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 export class createTableUserTypes1626010384867 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(new Table({
-      name: 'type_users',
+      name: 'user_types',
       columns: [
         {
           name: 'id',

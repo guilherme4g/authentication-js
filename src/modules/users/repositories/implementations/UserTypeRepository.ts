@@ -1,21 +1,21 @@
 import { getRepository, Repository } from 'typeorm';
-import { TypeUser } from '../../entities/typeUsers';
-import { ICreateTypeUserDTO, ITypeUsersRepository } from '../ITypeUsersRepository';
+import { UserType } from '../../entities/userType';
+import { ICreateUserTypeDTO, IUserTypeRepository } from '../IUserTypeRepository';
 
-export class TypeUserRepository implements ITypeUsersRepository {
-  private repository: Repository<TypeUser>;
+export class UserTypeRepository implements IUserTypeRepository {
+  private repository: Repository<UserType>;
 
   constructor() {
-    this.repository = getRepository(TypeUser);
+    this.repository = getRepository(UserType);
   }
 
-  list(): Promise<TypeUser[]> {
+  list(): Promise<UserType[]> {
     throw new Error('Method not implemented.');
   }
 
   // TODO implements method
   // eslint-disable-next-line no-unused-vars
-  async create({ name }: ICreateTypeUserDTO): Promise<TypeUser> {
+  async create({ name }: ICreateUserTypeDTO): Promise<UserType> {
     const typeUser = this.repository.create({ name });
     await this.repository.save(typeUser);
     return typeUser;

@@ -1,8 +1,8 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
 
-@Entity('type_users')
-export class TypeUser {
+@Entity('user_types')
+export class UserType {
   @PrimaryGeneratedColumn('uuid')
   id?: string;
 
