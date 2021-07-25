@@ -20,6 +20,7 @@
       "class-methods-use-this": "off",
       "no-useless-constructor": "off",
       "no-empty-function": "off",
+      "camelcase": "warn",
       "import/extensions": [
         "error",
         "ignorePackages",
