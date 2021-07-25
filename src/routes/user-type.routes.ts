@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import createUserTypeController from '../modules/users/useCases/createUserType';
-import listUserTypesController from '../modules/users/useCases/listUserTypes';
-import removeUserTypeController from '../modules/users/useCases/removeUserType';
+import createUserTypeController from '../modules/user_types/useCases/createUserType';
+import listUserTypesController from '../modules/user_types/useCases/listUserTypes';
+import removeUserTypeController from '../modules/user_types/useCases/removeUserType';
 
 const userTypeRoutes = Router();
 

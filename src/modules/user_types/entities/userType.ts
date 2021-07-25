@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
-import { User } from './user';
+import { User } from '../../users/entities/user';
 
 @Entity('user_types')
 export class UserType {

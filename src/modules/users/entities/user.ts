@@ -7,7 +7,7 @@ import {
   JoinColumn,
 } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
-import { UserType } from './userType';
+import { UserType } from '../../user_types/entities/userType';
 
 @Entity('users')
 export class User {
@@ -24,7 +24,7 @@ export class User {
   password!: string;
 
   @Column()
-  typeUserId!: string;
+  typeUser_id!: string;
 
   @CreateDateColumn()
   created_at!: Date;

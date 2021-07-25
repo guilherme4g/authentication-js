@@ -23,7 +23,7 @@ export class UserRepository implements IUserRepository {
       name,
       email,
       password,
-      typeUserId: typeUser,
+      typeUser_id: typeUser,
     });
     await this.repository.save(user);
     return user;
