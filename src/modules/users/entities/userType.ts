@@ -1,5 +1,12 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
+import { User } from './user';
 
 @Entity('user_types')
 export class UserType {
@@ -8,6 +15,12 @@ export class UserType {
 
   @Column()
   name!: string;
+
+  @OneToMany(() => User, (user) => user.userType, {
+    cascade: ['insert', 'update'],
+  })
+  @JoinColumn({ name: 'typeUser_id' })
+  users!: User[];
 
   constructor() {
     if (!this.id) this.id = uuidV4();
