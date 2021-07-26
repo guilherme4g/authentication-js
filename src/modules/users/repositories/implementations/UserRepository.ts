@@ -10,7 +10,8 @@ export class UserRepository implements IUserRepository {
   }
 
   list(): Promise<User[]> {
-    throw new Error('Method not implemented.');
+    const users = this.repository.find({});
+    return users;
   }
 
   async create({
