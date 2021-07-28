@@ -35,7 +35,7 @@ export class UserRepository implements IUserRepository {
     return user;
   }
 
-  remove(id: string): Promise<void> {
-    throw new Error('Method not implemented.');
+  async remove(id: string): Promise<void> {
+    await this.repository.delete(id);
   }
 }
