@@ -9,6 +9,7 @@ export interface ICreateUserDTO {
 
 export interface IUserRepository {
   list(): Promise<User[]>,
+  findById(id: string): Promise<User | undefined>,
   create(data: ICreateUserDTO): Promise<User>,
   remove(id: string): Promise<void>,
 }
