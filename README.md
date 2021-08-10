@@ -59,8 +59,11 @@ $ cd authentication-js
 # install the dependencies:
 $ yarn
 
-# start the api:
-$ yarn start
+# start the database and API:
+$ docker-compose up
+
+# execute migrations (if it's your first time or add new migration):
+$ yarn typeorm migration:run
 ```
 
 ## Observation 👀
